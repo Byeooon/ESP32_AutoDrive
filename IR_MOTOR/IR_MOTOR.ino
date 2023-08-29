@@ -167,19 +167,19 @@ void loop() {
   // Control the Delay!
   // Control the Speed!
 
-  if((R < 150) && (L > 150)){ // turn left
-    ifMotor.pwmWrite(WHEEL_RIGHT, BACKWARD, 525);
-    ifMotor.pwmWrite(WHEEL_LEFT, FORWARD, 525);
-    delay(2);
+  if((R < 250) && (L > 1000)){ // turn left
+    ifMotor.pwmWrite(WHEEL_RIGHT, BACKWARD, 550);
+    ifMotor.pwmWrite(WHEEL_LEFT, FORWARD, 700);
+    //delay(2);
   }
-  else if((R > 150) && (L < 150)){ // turn right
-    ifMotor.pwmWrite(WHEEL_RIGHT, FORWARD, 525);
-    ifMotor.pwmWrite(WHEEL_LEFT, BACKWARD, 525);
-    delay(2);
+  else if((R > 1000) && (L < 250)){ // turn right
+    ifMotor.pwmWrite(WHEEL_RIGHT, FORWARD, 700);
+    ifMotor.pwmWrite(WHEEL_LEFT, BACKWARD, 550);
+    //delay(2);
   }
   else{ // forward
-    ifMotor.pwmWrite(WHEEL_RIGHT, FORWARD, 525);
-    ifMotor.pwmWrite(WHEEL_LEFT, FORWARD, 525);
-    delay(2);
+    ifMotor.pwmWrite(WHEEL_RIGHT, FORWARD, 700);
+    ifMotor.pwmWrite(WHEEL_LEFT, FORWARD, 700);
+    //delay(2);
   }
 }
